@@ -44,10 +44,15 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
     //next players turn
     activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
     //same as an if statement, but its a turnery
+
     roundScore = 0;
     document.getElementById("current-0").textContent = "0";
     document.getElementById("current-1").textContent = "0";
     //now reset the score to 0 when a 1/sad pumpkin is rolled
+
+    document.querySelector(".player-0-panel").classList.toggle("active");
+    document.querySelector(".player-1-panel").classList.toggle("active");
+    //remove active class and move it to the player whos turn it actually is
   }
 });
 
