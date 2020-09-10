@@ -15,10 +15,7 @@
 }
 
 body {
-  background-image: linear-gradient(
-      rgba(62, 20, 20, 0.4),
-      rgba(62, 20, 20, 0.4)
-    ),
+  background-image: linear-gradient(rgb(219, 96, 24), rgb(219, 96, 24)),
     url(back.jpg);
   background-size: cover;
   background-position: center;
@@ -26,7 +23,7 @@ body {
   font-weight: 300;
   position: relative;
   height: 100vh;
-  color: #555;
+  color: orange;
 }
 
 .wrapper {
