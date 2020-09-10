@@ -53,6 +53,9 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
     document.querySelector(".player-0-panel").classList.toggle("active");
     document.querySelector(".player-1-panel").classList.toggle("active");
     //remove active class and move it to the player whos turn it actually is
+
+    document.querySelector(".pumpkin").style.display = "none";
+    //when the players turn changes, it will then hide the pumpkins and start anew
   }
 });
 
