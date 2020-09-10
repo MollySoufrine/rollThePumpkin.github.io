@@ -12,3 +12,10 @@ above are the originl rules of the game from the udemy course i followed about j
 to chanfe the photos from dice to pumpkins and depending on which face comes up, it will add points the user will lose all
 their points and it will change to the other user's turn. Still the same rules, just changing the photos really.
 */
+var scores, roundScore, activePlayer, dice;
+
+scores = [0, 0];
+roundScore = 0;
+activePlayer = 0;
+
+pumpkin = Math.floor(Math.random * 6) + 1;
