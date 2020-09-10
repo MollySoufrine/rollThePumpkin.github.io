@@ -18,8 +18,6 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 1;
 
-document.querySelector("#current-" + activePlayer).textContent = pumpkin;
-
 document.querySelector(".pumpkin").style.display = "none";
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
@@ -29,7 +27,10 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
   //then we need to display result
   var pumpkinDOM = document.querySelector(".pumpkin");
   pumpkinDOM.style.display = "block";
-  pumpkinDOM.src = "pumpkin" + dice;
+  pumpkinDOM.src = "pumpkin-" + pumpkin + ".png";
 
   //Update the round score but only if the rolled pumpkin is not pumpkin1
 });
+
+//document.querySelector("#current-" + activePlayer).textContent = pumpkin;
+//the abover was used to test something but may need it later
