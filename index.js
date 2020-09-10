@@ -21,4 +21,4 @@ activePlayer = 0;
 pumpkin = Math.floor(Math.random * 6) + 1;
 // console.log(pumpkin);
 
-document.querySelector("#score-0").textContent = pumpkin;
+document.querySelector("#current-" + activePlayer).textContent = pumpkin;
