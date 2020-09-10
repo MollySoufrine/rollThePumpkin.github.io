@@ -16,9 +16,13 @@ var scores, roundScore, activePlayer;
 
 scores = [0, 0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 document.querySelector(".pumpkin").style.display = "none";
+document.getElementById("score-0").textContent = "0";
+document.getElementById("score-1").textContent = "0";
+document.getElementById("current-0").textContent = "0";
+document.getElementById("current-1").textContent = "0";
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
   //when someone clicks the button, we need a random number
@@ -30,7 +34,15 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
   pumpkinDOM.src = "pumpkin-" + pumpkin + ".png";
 
   //Update the round score but only if the rolled pumpkin is not pumpkin1
+  if (pumpkin !== 1) {
+    //add score
+    roundScore += pumpkin;
+    //first update roundScore
+    document.querySelector("#current-" + activePlayer).textContent = roundScore;
+    //then display roundScore
+  } else {
+    //next players turn
+  }
 });
 
-//document.querySelector("#current-" + activePlayer).textContent = pumpkin;
 //the abover was used to test something but may need it later
