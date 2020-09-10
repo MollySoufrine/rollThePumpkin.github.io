@@ -18,7 +18,7 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
 
-pumpkin = Math.floor(Math.random * 6) + 1;
-// console.log(pumpkin);
+pumpkin = Math.floor(Math.random() * 6) + 1;
+console.log(pumpkin);
 
 document.querySelector("#current-" + activePlayer).textContent = pumpkin;
