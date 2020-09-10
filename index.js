@@ -18,9 +18,15 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 1;
 
-pumpkin = Math.floor(Math.random() * 6) + 1;
-console.log(pumpkin);
-
 document.querySelector("#current-" + activePlayer).textContent = pumpkin;
 
 document.querySelector(".pumpkin").style.display = "none";
+
+document.querySelector(".btn-roll").addEventListener("click", function () {
+  //when someone clicks the button, we need a random number
+  pumpkin = Math.floor(Math.random() * 6) + 1;
+  // console.log(pumpkin);
+  //then we need to display result
+
+  //Update the round score but only if the rolled pumpkin is not pumpkin1
+});
