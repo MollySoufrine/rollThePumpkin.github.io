@@ -16,9 +16,11 @@ var scores, roundScore, activePlayer, dice;
 
 scores = [0, 0];
 roundScore = 0;
-activePlayer = 0;
+activePlayer = 1;
 
 pumpkin = Math.floor(Math.random() * 6) + 1;
 console.log(pumpkin);
 
 document.querySelector("#current-" + activePlayer).textContent = pumpkin;
+
+document.querySelector(".pumpkin").style.display = "none";
