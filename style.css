@@ -64,7 +64,7 @@ body {
   text-align: center;
   font-size: 80px;
   font-weight: 100;
-  color: #eb4d4d;
+  color: black;
   margin-bottom: 130px;
 }
 
@@ -79,13 +79,13 @@ body {
   content: "\2022";
   font-size: 47px;
   position: absolute;
-  color: #eb4d4d;
+  color: black;
   top: -7px;
   right: 10px;
 }
 
 .player-current-box {
-  background-color: #eb4d4d;
+  background-color: black;
   color: #fff;
   width: 40%;
   margin: 0 auto;
@@ -132,7 +132,7 @@ button:focus {
 }
 
 i {
-  color: #eb4d4d;
+  color: black;
   display: inline-block;
   margin-right: 15px;
   font-size: 32px;
@@ -166,5 +166,5 @@ i {
 }
 .winner .player-name {
   font-weight: 300;
-  color: #eb4d4d;
+  color: black;
 }
