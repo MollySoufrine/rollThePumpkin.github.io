@@ -9,6 +9,6 @@ GAME RULES:
 
 /*
 above are the originl rules of the game from the udemy course i followed about javascript. I decided since halloween is coming up
-to chanfe the photos from dice to pumpkins and depending on which face comes up, it will add points or take away all the users 
-points and change to the other user's turn. Still the same rules, just changing the photos really.
+to chanfe the photos from dice to pumpkins and depending on which face comes up, it will add points the user will lose all
+their points and it will change to the other user's turn. Still the same rules, just changing the photos really.
 */
