@@ -19,4 +19,6 @@ roundScore = 0;
 activePlayer = 0;
 
 pumpkin = Math.floor(Math.random * 6) + 1;
-console.log(pumpkin);
+// console.log(pumpkin);
+
+document.querySelector("#score-0").textContent = pumpkin;
