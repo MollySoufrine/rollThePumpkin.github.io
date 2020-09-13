@@ -48,7 +48,7 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
 document.querySelector(".btn-hold").addEventListener("click", function () {
   //add current score to players global score
   scores[activePlayer] += roundScore;
-  //the aboe is equivalent to scores[activePlayer] = score[activePlayer] + roundScore
+  //the above is equivalent to scores[activePlayer] = score[activePlayer] + roundScore
   //so the scores that the active player had plus the round score
 
   //update user interface(UI)
@@ -56,8 +56,12 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     scores[activePlayer];
 
   //check if player won the game
+  if (scores[activePlayer] >= 100) {
+    //must be >= because of how the idce is rolled, if its over 100 and we only used ====
+    //then it wouldnt count that as a win
+    document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+  }
 
-  //
   nextPlayer();
 });
 
