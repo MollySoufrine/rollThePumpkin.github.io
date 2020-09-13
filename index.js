@@ -66,10 +66,13 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
   //so the scores that the active player had plus the round score
 
   //update user interface(UI)
-  document.querySelector(".#score-" + activePlayer).textContent =
+  document.querySelector("#score-" + activePlayer).textContent =
     scores[activePlayer];
 
   //check if player won the game
 });
+
+//implement DRY
+function nextPlayer() {}
 
 //the abover was used to test something but may need it later
