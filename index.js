@@ -14,9 +14,8 @@ their points and it will change to the other user's turn. Still the same rules, 
 */
 var scores, roundScore, activePlayer;
 
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
+//call init function
+init();
 
 document.querySelector(".pumpkin").style.display = "none";
 document.getElementById("score-0").textContent = "0";
@@ -60,6 +59,16 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     //must be >= because of how the idce is rolled, if its over 100 and we only used ====
     //then it wouldnt count that as a win
     document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+    //after winning the dice with not be shown
+    document.querySelector(".dice").style.display = "none";
+    //below, using a class made in css, when a user wins, we use that class to remove the
+    //active player effect
+    document
+      .querySelector(".player-" + activePlayer + "-panel")
+      .classList.add("winner");
+    document
+      .querySelector(".player-" + activePlayer + "-panel")
+      .classList.remove("winner");
   }
 
   nextPlayer();
@@ -82,6 +91,16 @@ function nextPlayer() {
   //remove active class and move it to the player whos turn it actually is
 
   document.querySelector(".pumpkin").style.display = "none";
+}
+
+document.querySelector(".btn-new").addEventListener("click", function () {
+  init();
+});
+
+function init() {
+  scores = [0, 0];
+  roundScore = 0;
+  activePlayer = 0;
 }
 
 //the abover was used to test something but may need it later
