@@ -101,6 +101,15 @@ function init() {
   document.getElementById("current-1").textContent = "0";
   document.getElementById("name-0").textContent = "Player1";
   document.getElementById("name-1").textContent = "Player2";
+
+  //remove winner class when clicking new game or at beginning
+  //remove class from both because we dont know who won/wins the game
+  document.querySelector(".player-panel-0").classList.remove("winner");
+  document.querySelector(".player-panel-1").classList.remove("winner");
+
+  //do the same for the active player as well
+  document.querySelector(".player-panel-1").classList.remove("active");
+  document.querySelector(".player-panel-1").classList.remove("active");
 }
 
 //the abover was used to test something but may need it later
