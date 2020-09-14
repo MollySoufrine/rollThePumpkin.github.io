@@ -17,12 +17,6 @@ var scores, roundScore, activePlayer;
 //call init function
 init();
 
-document.querySelector(".pumpkin").style.display = "none";
-document.getElementById("score-0").textContent = "0";
-document.getElementById("score-1").textContent = "0";
-document.getElementById("current-0").textContent = "0";
-document.getElementById("current-1").textContent = "0";
-
 document.querySelector(".btn-roll").addEventListener("click", function () {
   //when someone clicks the button, we need a random number
   var pumpkin = Math.floor(Math.random() * 6) + 1;
@@ -101,6 +95,12 @@ function init() {
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
+
+  document.querySelector(".pumpkin").style.display = "none";
+  document.getElementById("score-0").textContent = "0";
+  document.getElementById("score-1").textContent = "0";
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("current-1").textContent = "0";
 }
 
 //the abover was used to test something but may need it later
