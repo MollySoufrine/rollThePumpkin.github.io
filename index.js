@@ -87,9 +87,7 @@ function nextPlayer() {
   document.querySelector(".pumpkin").style.display = "none";
 }
 
-document.querySelector(".btn-new").addEventListener("click", function () {
-  init();
-});
+document.querySelector(".btn-new").addEventListener("click", init);
 
 function init() {
   scores = [0, 0];
@@ -101,6 +99,8 @@ function init() {
   document.getElementById("score-1").textContent = "0";
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
+  document.getElementById("name-0").textContent = "Player1";
+  document.getElementById("name-1").textContent = "Player2";
 }
 
 //the abover was used to test something but may need it later
