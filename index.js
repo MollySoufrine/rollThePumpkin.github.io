@@ -54,7 +54,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     //then it wouldnt count that as a win
     document.querySelector("#name-" + activePlayer).textContent = "Winner!";
     //after winning the dice with not be shown
-    document.querySelector(".dice").style.display = "none";
+    document.querySelector(".pumpkin").style.display = "none";
     //below, using a class made in css, when a user wins, we use that class to remove the
     //active player effect
     document
@@ -104,12 +104,16 @@ function init() {
 
   //remove winner class when clicking new game or at beginning
   //remove class from both because we dont know who won/wins the game
-  document.querySelector(".player-panel-0").classList.remove("winner");
-  document.querySelector(".player-panel-1").classList.remove("winner");
+  document.querySelector(".player-0-panel").classList.remove("winner");
+  document.querySelector(".player-1-panel").classList.remove("winner");
 
   //do the same for the active player as well
-  document.querySelector(".player-panel-1").classList.remove("active");
-  document.querySelector(".player-panel-1").classList.remove("active");
+  document.querySelector(".player-0-panel").classList.remove("active");
+  document.querySelector(".player-1-panel").classList.remove("active");
+  //we remove the active class so we are sure it is not anywhere
+
+  //then add it back to the first one
+  document.querySelector(".player-0-panel").classList.add("active");
 }
 
 //the abover was used to test something but may need it later
