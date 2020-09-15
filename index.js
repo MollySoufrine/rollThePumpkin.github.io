@@ -19,17 +19,17 @@ init();
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
   //when someone clicks the button, we need a random number
-  var pumpkin = Math.floor(Math.random() * 6) + 1;
+  var nigthmare = Math.floor(Math.random() * 6) + 1;
   // console.log(pumpkin);
   //then we need to display result
-  var pumpkinDOM = document.querySelector(".pumpkin");
-  pumpkinDOM.style.display = "block";
-  pumpkinDOM.src = "pumpkin-" + pumpkin + ".png";
+  var nigthmareDOM = document.querySelector(".pumpkin");
+  nigthmareDOM.style.display = "block";
+  nigthmareDOM.src = "nightmare-" + nightmare + ".png";
 
   //Update the round score but only if the rolled pumpkin is not pumpkin1
-  if (pumpkin !== 1) {
+  if (nigthmare !== 1) {
     //add score
-    roundScore += pumpkin;
+    roundScore += nigthmare;
     //first update roundScore
     document.querySelector("#current-" + activePlayer).textContent = roundScore;
     //then display roundScore
@@ -94,7 +94,7 @@ function init() {
   roundScore = 0;
   activePlayer = 0;
 
-  document.querySelector(".pumpkin").style.display = "none";
+  document.querySelector(".nightmare").style.display = "none";
   document.getElementById("score-0").textContent = "0";
   document.getElementById("score-1").textContent = "0";
   document.getElementById("current-0").textContent = "0";
