@@ -99,7 +99,7 @@ function nextPlayer() {
   document.querySelector(".player-1-panel").classList.toggle("active");
   //remove active class and move it to the player whos turn it actually is
 
-  document.querySelector(".pumpkin").style.display = "none";
+  document.querySelector(".nightmare").style.display = "none";
 }
 
 document.querySelector(".btn-new").addEventListener("click", init);
