@@ -48,35 +48,37 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
 });
 
 document.querySelector(".btn-hold").addEventListener("click", function () {
-  //add current score to players global score
-  scores[activePlayer] += roundScore;
-  //the above is equivalent to scores[activePlayer] = score[activePlayer] + roundScore
-  //so the scores that the active player had plus the round score
+  if (gamePlaying) {
+    //add current score to players global score
+    scores[activePlayer] += roundScore;
+    //the above is equivalent to scores[activePlayer] = score[activePlayer] + roundScore
+    //so the scores that the active player had plus the round score
 
-  //update user interface(UI)
-  document.querySelector("#score-" + activePlayer).textContent =
-    scores[activePlayer];
+    //update user interface(UI)
+    document.querySelector("#score-" + activePlayer).textContent =
+      scores[activePlayer];
 
-  //check if player won the game
-  if (scores[activePlayer] >= 100) {
-    //must be >= because of how the idce is rolled, if its over 100 and we only used ====
-    //then it wouldnt count that as a win
-    document.querySelector("#name-" + activePlayer).textContent = "Winner!";
-    //after winning the dice with not be shown
-    document.querySelector(".pumpkin").style.display = "none";
-    //below, using a class made in css, when a user wins, we use that class to remove the
-    //active player effect
-    document
-      .querySelector(".player-" + activePlayer + "-panel")
-      .classList.add("winner");
-    document
-      .querySelector(".player-" + activePlayer + "-panel")
-      .classList.remove("winner");
-    gamePlaying = false;
-    //we set gamePlaying to false here, after a winner has been detected to tell
-    //that the game is over
-  } else {
-    nextPlayer();
+    //check if player won the game
+    if (scores[activePlayer] >= 100) {
+      //must be >= because of how the idce is rolled, if its over 100 and we only used ====
+      //then it wouldnt count that as a win
+      document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+      //after winning the dice with not be shown
+      document.querySelector(".pumpkin").style.display = "none";
+      //below, using a class made in css, when a user wins, we use that class to remove the
+      //active player effect
+      document
+        .querySelector(".player-" + activePlayer + "-panel")
+        .classList.add("winner");
+      document
+        .querySelector(".player-" + activePlayer + "-panel")
+        .classList.remove("winner");
+      gamePlaying = false;
+      //we set gamePlaying to false here, after a winner has been detected to tell
+      //that the game is over
+    } else {
+      nextPlayer();
+    }
   }
 });
 
