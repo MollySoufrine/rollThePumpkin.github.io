@@ -1,6 +1,19 @@
 /**********************************************
 *** GENERAL
 **********************************************/
+.final-score {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 520px;
+  color: orange;
+  font-size: 18px;
+  font-family: "lato";
+  text-align: center;
+  padding: 10px;
+  width: 160px;
+  text-transform: uppercase;
+}
 
 * {
   margin: 0;

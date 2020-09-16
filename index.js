@@ -12,14 +12,14 @@ above are the originl rules of the game from the udemy course i followed about j
 to chanfe the photos from dice to pumpkins and depending on which face comes up, it will add points the user will lose all
 their points and it will change to the other user's turn. Still the same rules, just changing the photos really.
 */
-var scores, roundScore, activePlayer, lastRoll;
+var scores, roundScore, activePlayer;
 //declare a state var that tells us whether the game is being played or not..gamePlaying
 //decalred in global scope to be used in other functions
 var gamePlaying = Boolean;
 
 //call init function
 init();
-
+var lastRoll;
 document.querySelector(".btn-roll").addEventListener("click", function () {
   if (gamePlaying) {
     //when someone clicks the button, we need a random number
@@ -66,9 +66,17 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     //update user interface(UI)
     document.querySelector("#score-" + activePlayer).textContent =
       scores[activePlayer];
-
+    var input = document.querySelector(".final-score").value;
+    //type coersion. undefined, 0 , null or "" are coerced to false
+    //anything else is coerced to true
+    var winningScore;
+    if (input) {
+      winningScore = input;
+    } else {
+      winningScore = 100;
+    }
     //check if player won the game
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= winningScore) {
       //must be >= because of how the dice is rolled, if its over 100 and we only used ====
       //then it wouldnt count that as a win
       document.querySelector("#name-" + activePlayer).textContent =
