@@ -63,7 +63,8 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     if (scores[activePlayer] >= 100) {
       //must be >= because of how the idce is rolled, if its over 100 and we only used ====
       //then it wouldnt count that as a win
-      document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+      document.querySelector("#name-" + activePlayer).textContent =
+        "Nice work, Bone Daddy!";
       //after winning the dice with not be shown
       document.querySelector(".nightmare").style.display = "none";
       //below, using a class made in css, when a user wins, we use that class to remove the
