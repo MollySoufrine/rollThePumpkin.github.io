@@ -61,7 +61,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
 
     //check if player won the game
     if (scores[activePlayer] >= 100) {
-      //must be >= because of how the idce is rolled, if its over 100 and we only used ====
+      //must be >= because of how the dice is rolled, if its over 100 and we only used ====
       //then it wouldnt count that as a win
       document.querySelector("#name-" + activePlayer).textContent =
         "Nice work, Bone Daddy!";
@@ -100,7 +100,7 @@ function nextPlayer() {
   document.querySelector(".player-1-panel").classList.toggle("active");
   //remove active class and move it to the player whos turn it actually is
 
-  document.querySelector(".nightmare").style.display = "none";
+  // document.querySelector(".nightmare").style.display = "none";
 }
 
 document.querySelector(".btn-new").addEventListener("click", init);
