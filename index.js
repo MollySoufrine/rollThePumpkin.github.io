@@ -12,9 +12,10 @@ above are the originl rules of the game from the udemy course i followed about j
 to chanfe the photos from dice to pumpkins and depending on which face comes up, it will add points the user will lose all
 their points and it will change to the other user's turn. Still the same rules, just changing the photos really.
 */
-var scores, roundScore, activePlayer, gamePlaying;
-//declare a state var tha tells us whether the game is being played or not..gamePlaying
+var scores, roundScore, activePlayer;
+//declare a state var that tells us whether the game is being played or not..gamePlaying
 //decalred in global scope to be used in other functions
+var gamePlaying = Boolean;
 
 //call init function
 init();
@@ -64,7 +65,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
       //then it wouldnt count that as a win
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
       //after winning the dice with not be shown
-      document.querySelector(".pumpkin").style.display = "none";
+      document.querySelector(".nightmare").style.display = "none";
       //below, using a class made in css, when a user wins, we use that class to remove the
       //active player effect
       document
@@ -72,7 +73,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
         .classList.add("winner");
       document
         .querySelector(".player-" + activePlayer + "-panel")
-        .classList.remove("winner");
+        .classList.remove("active");
       gamePlaying = false;
       //we set gamePlaying to false here, after a winner has been detected to tell
       //that the game is over
