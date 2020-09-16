@@ -34,7 +34,7 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
 
     if (nightmare === 6 && lastRoll === 6) {
       //player loses score
-      score[activePlayer] = 0;
+      scores[activePlayer] = 0;
       document.querySelector("#score-" + activePlayer).textContent = "0";
       nextPlayer();
     } else if (nightmare !== 1) {
